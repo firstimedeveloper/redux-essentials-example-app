@@ -27,7 +27,7 @@ export const SinglePostPage = ({ match}) => {
                 <div>
                     <PostAuthor userId={post.user} />
                     <TimeAgo timestamp={post.date} />
-                    <ReactionButtons postId={post.Id} />
+                    <ReactionButtons post={post} />
                 </div>
                 <p className="post-content">{post.content}</p>
                 <Link to={`/editPost/${post.id}`} className="button">

@@ -15,7 +15,7 @@ export const PostsList = () => {
                 <div>
                     <PostAuthor userId={post.user} />
                     <TimeAgo timestamp={post.date} />
-                    <ReactionButtons postId = {post.Id} />
+                    <ReactionButtons post={post}/>
                 </div>
                 <p className="post-content">{post.content.substring(0,100)}</p>
                 <Link to={`/posts/${post.id}`} className="button muted-button">
